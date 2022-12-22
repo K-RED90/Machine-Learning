@@ -1,0 +1,35 @@
+[
+    {
+        "transform__cat_columns__one_hot__drop": "if_binary",
+        "logit__solver": "saga",
+        "logit__penalty": "l1",
+        "logit__C": 5.0
+    },
+    {
+        "transform__cat_columns__one_hot__drop": null,
+        "knn__weights": "uniform",
+        "knn__p": 2,
+        "knn__n_neighbors": 20,
+        "knn__algorithm": "ball_tree"
+    },
+    {
+        "transform__cat_columns__one_hot__drop": "first",
+        "rfc__max_features": "log2",
+        "rfc__max_depth": 6,
+        "rfc__criterion": "entropy",
+        "rfc__class_weight": "balanced_subsample"
+    },
+    {
+        "transform__cat_columns__one_hot__drop": "first",
+        "svc__kernel": "poly",
+        "svc__gamma": "auto",
+        "svc__C": 1.0
+    },
+    {
+        "transform__cat_columns__one_hot__drop": null,
+        "dt__min_samples_split": 2,
+        "dt__max_features": "sqrt",
+        "dt__max_depth": 3,
+        "dt__criterion": "gini"
+    }
+]
